@@ -53,6 +53,7 @@ function preload ()
 {
     this.load.image('background', 'assets/bg.png');
     this.load.image('platform', 'assets/ledges.png');
+    this.load.image('ground', 'assets/ground.png');
     this.load.image('star', 'assets/star.png');
     this.load.image('bomb', 'assets/bomb.png');
     this.load.spritesheet('dude', 'assets/dude.png', { frameWidth: 32, frameHeight: 48 });
@@ -68,10 +69,10 @@ function create ()
 
     //  Here we create the ground.
     //  Scale it to fit the width of the game (the original sprite is 400x32 in size)
-    platforms.create(400, 568, 'platform').setScale(2).refreshBody();
+    platforms.create(400, 568, 'ground').setScale(2).refreshBody();
 
     //  Now let's create some ledges
-    platforms.create(600, 400, 'platform');
+    platforms.create(620, 400, 'platform');
     platforms.create(50, 250, 'platform');
     platforms.create(750, 220, 'platform');
 
